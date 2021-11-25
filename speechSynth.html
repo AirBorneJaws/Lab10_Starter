@@ -42,7 +42,9 @@
     var ldclient = LDClient.initialize('619fd91c337c390f3d68b7d3', user);
     function render() {
       var shouldShow = ldclient.variation('blue-title', false);
-      shouldShow && document.header.classList.add('blue');
+      let header = document.getElementById("explore");
+      header[0].style.color='blue';
+      shouldShow && header[0];
     }
 
     ldclient.on('ready', render);
