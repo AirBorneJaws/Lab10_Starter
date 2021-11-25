@@ -23,7 +23,7 @@
   <main>
     <section id="explore">
       <header>
-        <h2>Speech Synthesizer</h2>
+        <h2 id="headercolor">Speech Synthesizer</h2>
       </header>
       <img src="assets/images/smiling.png" alt="Smiling face" />
       <textarea name="text-to-speak" id="text-to-speak" rows="10" placeholder="Text to speak here"></textarea>
@@ -42,7 +42,7 @@
     var ldclient = LDClient.initialize('619fd91c337c390f3d68b7d3', user);
     function render() {
       var shouldShow = ldclient.variation('blue-title', false);
-      shouldShow &&  document.body.header.classList.add('blue');
+      shouldShow &&  document.getElementById("headercolor").style.backgroundColor('blue');
     }
 
     ldclient.on('ready', render);
