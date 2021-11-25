@@ -69,6 +69,26 @@
     ldclient.on('ready', render);
     ldclient.on('change', render);
   </script>
+  <body>
+  <header>
+    <nav>
+      <a href="index.html" title="Go to  party horn">Party Horn</a>
+    </nav>
+  </header>
+  <main>
+    <section id="explore">
+      <header>
+        <h2>Speech Synthesizer</h2>
+      </header>
+      <img src="assets/images/smiling.png" alt="Smiling face" />
+      <textarea name="text-to-speak" id="text-to-speak" rows="10" placeholder="Text to speak here"></textarea>
+      <select name="voice" id="voice-select">
+        <option value="select" disabled selected>Select Voice:</option>
+      </select>
+      <button>Press to Talk</button>
+    </section>
+  </main>
+</body>
 </body>
 
 </html>
