@@ -41,8 +41,8 @@
 
     var ldclient = LDClient.initialize('619fd91c337c390f3d68b7d3', user);
     function render() {
-      var shouldShow = ldclient.variation('colored-title', false);
-      shouldShow && document.body.classList.add('blueheader');
+      var shouldShow = ldclient.variation('skyblue-title', false);
+      shouldShow && document.body.classList.add('blue');
     }
 
     ldclient.on('ready', render);
