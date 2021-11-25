@@ -14,7 +14,6 @@
   <!-- Main Stylesheet & Scripts -->
   <link rel="stylesheet" href="assets/styles/global.css" />
   <script src="assets/scripts/partyHorn.js" type="module"></script>
-  <script src="https://unpkg.com/launchdarkly-js-client-sdk@2"></script>
 </head>
 
 <body>
@@ -41,42 +40,6 @@
       </div>
       <button>Play Sound</button>
       <audio class="hidden" src=""></audio>
-    </section>
-  </main>
-  <script>
-  const random = Math.floor(new Date().getTime() * Math.random());
-
-  var user = {
-    key: random,
-  };
-  
-  
-    var ldclient = LDClient.initialize('619fd91c337c390f3d68b7d3', user);
-  
-    function render() {
-      var shouldShow = ldclient.variation('blue-background', false);
-      shouldShow && document.body.classList.add('blue');
-    }
-  
-    ldclient.on('ready', render);
-    ldclient.on('change', render);
-  </script>
-  <header>
-    <nav>
-      <a href="index.html" title="Go to  party horn">Party Horn</a>
-    </nav>
-  </header>
-  <main>
-    <section id="explore">
-      <header>
-        <h2>Speech Synthesizer</h2>
-      </header>
-      <img src="assets/images/smiling.png" alt="Smiling face" />
-      <textarea name="text-to-speak" id="text-to-speak" rows="10" placeholder="Text to speak here"></textarea>
-      <select name="voice" id="voice-select">
-        <option value="select" disabled selected>Select Voice:</option>
-      </select>
-      <button>Press to Talk</button>
     </section>
   </main>
 </body>
